@@ -4,10 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
-axios_1.default.get("https://jsonplaceholder.typicode.com/users/1")
+axios_1.default
+    .get("https://jsonplaceholder.typicode.com/users/1")
     .then(res => {
     console.log('woo');
-    console.log(res.data);
+    const { data } = res;
 }).catch(e => {
     console.log('error', e);
 });
